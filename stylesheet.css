@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+
+*, *:after
+{
+  font-family: 'Roboto';
+  box-sizing: border-box;
+}
+
+/* Cards */
+.card 
+{
+  display: inline-block;
+  background-color: #FAFAFA;
+  width: 350px;
+  height: 300px;
+  margin: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+/* Vertical cards on small screens */
+@media screen and (max-width: 992px) {
+  .card {
+    display: block;
+  }
+}
+
+.card-title
+{
+  margin: 0;
+  padding: 10px;
+  background-color: #009688;
+  color: #FFFFFF;
+  height: 50%;
+  display: flex;
+  align-items: flex-end;
+  font-weight: 300;
+}
+
+.card-description
+{
+  font-size: 14px;
+  padding: 0 10px 10px 10px;
+  font-weight: 300;
+  line-height: 25px;
+}
+
+.card-links
+{
+  display: flex;
+  align-self: flex-end;
+  align-items: center;
+  border-top: 1px solid #DCDCDC;
+  height: 20%;
+}
+
+.card-links a 
+{
+  padding: 10px;
+  color: #009688;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+/* Checkboxes */
+.checkboxes 
+{
+  list-style-type: none;
+  padding: 0;
+}
+
+.checkboxes li 
+{
+  width: 250px;
+  display: grid;
+  grid-template-columns: 80% 20%;
+  margin: 20px;
+}
+
+.checkbox {
+  position: relative;
+  width: 1.5em;
+  height: 1.5em;
+  border: 2px solid #757575;
+  border-radius: 4px;
+  appearance: none;
+  outline: 0;
+  cursor: pointer;
+}
+
+/* Custom checkbox */
+/* Creates checkmark */
+.checkbox::after {
+  position: absolute;
+  content: "";
+  display: block;
+  top: -1px;
+  left: 4px;
+  width: 8px;
+  height: 14px;
+  border-style: solid;
+  border-color: #fff;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+  opacity: 0;
+}
+
+.checkbox:checked {
+  color: #fff;
+  border-color: #009688;
+  background: #009688;
+}
+
+.checkbox:checked::after {
+  opacity: 1;
+}
+ 
+/* YouTube Player */
+#player-controls
+{
+  width: 640px;
+  height: 40px;
+  background-color: #DCDCDC;
+  padding-left: 5px;
+}
+
+#player-controls button
+{
+  margin-top: 8px;
+  border: none;
+  background-color: inherit;
+}
+
+#player-controls img
+{
+  height: 20px;
+}
+
+#player-controls img:hover
+{
+  filter: invert(42%) sepia(60%) saturate(4546%) hue-rotate(152deg) brightness(91%) contrast(101%);
+}
